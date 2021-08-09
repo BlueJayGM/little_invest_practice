@@ -1,0 +1,143 @@
+<!--  Intro  -->
+<section class="intro container">
+  <div class="intro-content">
+    <h1>
+      Planeje o seu futuro sem perder tempo no presente
+    </h1>
+    <button class="btn">Investir Agora</button>
+  </div>
+  <img src="/img/notre-dame.svg" alt="notre-dame">
+</section>
+<!--  Intro  -->
+
+<!--  Investments  -->
+<section class="investments">
+  <div class="btn-move btn-move-left">
+    <img class="unselect" src="/img/arrow.svg" alt="arrow">
+  </div>
+  <div class="scroller container">
+    {{#each cards}}
+      <div class="card">
+        <h2 class="card-title">
+          LCI 2018/12
+        </h2>
+        <h2 class="card-sub-title">
+          110% de CDB
+        </h2>
+
+        <div class="separator"></div>
+
+        <h4>Banco Certo</h4>
+        <button class="btn btn-add">Adicionar</button>
+      </div>
+    {{else}}
+    <h1>Nenhum item</h1>
+    {{/each}}
+  </div>
+  <div class="btn-move btn-move-right">
+    <img class="unselect" src="/img/arrow.svg" alt="arrow">
+  </div>
+</section>
+<!--  Investments  -->
+
+<!--  Advantage  -->
+<section class="advantage container">
+  <h2 class="advantage-title">Mais fácil que gastar dinheiro</h2>
+  <div class="advantage-container">
+    <div class="advantage-info">
+      <img src="/img/monitor.svg">
+      <h4>Acesso Online</h4>
+      <p>Acesse a nossa plataforma e escolha o seu plano</p>
+    </div>
+
+    <div class="advantage-info">
+      <img src="/img/monitor.svg">
+      <h4>Acesso Online</h4>
+      <p>Acesse a nossa plataforma e escolha o seu plano</p>
+    </div>
+
+    <div class="advantage-info">
+      <img src="/img/monitor.svg">
+      <h4>Acesso Online</h4>
+      <p>Acesse a nossa plataforma e escolha o seu plano</p>
+    </div>
+  </div>
+  <button class="btn">Entre em contato</button>
+</section>
+<!--  Advantage  -->
+
+<!--  Quote  -->
+<section class="quote container">
+  <blockquote cite="Gabriela Marques">
+    <p>Com o little invest eu pude ter certeza 
+    que o meu dinheiro estava rendendo sem 
+    ter que perder tempo do meu dia 
+    pensando onde investir.</p>
+    <small>~ Gabriela Marques ~</small>
+  </blockquote>
+</section>
+<!--  Quote  -->
+
+<section class="support_and_register">
+
+  <div class="register">
+
+    <h2>Crie a sua conta</h2>
+    <form class="form" action="" method="POST">
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+
+      <button type="submit" class="btn">Iniciar Cadastro</button>
+    </form>
+
+  </div>
+
+  <div class="support">
+    <img src="/img/customer_service.svg">
+    <h4>Ajuda 24h do nosso suporte online</h4>
+  </div>
+
+</section>
+
+<!-- SCRIPTS -->
+
+<script>
+  const btn_left = document.querySelector('.btn-move-left');
+  const btn_right = document.querySelector('.btn-move-right');
+  const ctn_investments = document.querySelector('.scroller');
+
+  let intervalID = 0;
+
+  function applyScroller(item, cond) {
+    if (item && item != null && item != undefined ) {
+      console.log(item);
+      item.addEventListener('click', cond == 'left' ? onListeningLeftArrow : onListeningRightArrow);
+
+      item.addEventListener('mousedown', (event) => {
+        intervalID = setInterval(cond == 'left' ? onListeningLeftArrow : onListeningRightArrow, 100);
+      });
+      item.addEventListener('mouseup', disableInterval);
+    }
+  }
+
+  applyScroller(btn_left, 'left');
+  applyScroller(btn_right, 'right');
+
+  function onListeningLeftArrow() {
+    ctn_investments.scrollLeft -= 20 * (2.25);
+  }
+
+  function onListeningRightArrow() {
+    ctn_investments.scrollLeft += 20 * (2.25);
+  }
+
+  function disableInterval() {
+    if ( intervalID != 0 ){
+      clearInterval(intervalID);
+      intervalID = 0;
+    }
+  }
+
+</script>

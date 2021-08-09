@@ -1,0 +1,442 @@
+
+/* Navigation CSS */
+.header .navigation {
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.navigation span {
+  margin-right: 1.25rem;
+}
+
+/* Intro CSS */
+.intro {
+  margin-top: 3.75rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.intro img {
+  width: 29.375rem;
+  height: 20.625rem;
+  margin-right: 6.25rem;
+}
+
+.intro .intro-content h1 {
+  font-size: 2.625rem;
+  max-width: 25rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+.intro .intro-content button {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+  padding: .9375rem 2.5rem;
+}
+
+/* Investments */
+.investments {
+  position: relative;
+  background: var(--blue);
+  margin-top: 3.75rem;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.investments .scroller {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+
+  overflow-x: hidden;
+}
+.btn-move {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 3.75rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-move:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-move img {
+  width: 2rem;
+}
+
+.btn-move-left {
+  left: 0;
+}
+
+
+.btn-move-right {
+  right: 0;
+}
+
+.btn-move-right img {
+  transform: rotateY(180deg);
+}
+
+.investments .card {
+  background: white;
+  padding: 2rem;
+  text-align: left;
+  margin-right: 2rem;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.investments .card:last-child {
+  margin-right: 0;
+}
+
+.investments .card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+  font-weight: 500;
+}
+
+.card .card-sub-title {
+  color: var(--blue);
+}
+
+.card .separator {
+  width: 2.5rem;
+  height: 2px;
+  background: #DEDEDE;
+  margin-bottom: 0.625rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+  color: #818181;
+  margin-bottom: 0.625rem;
+}
+
+/* Advantage CSS */
+.advantage {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.advantage h2 {
+  font-size: 2.625rem;
+  font-weight: 500;
+  line-height: 3rem;
+  margin-bottom: 3.125rem;
+  text-align: center;
+}
+
+.advantage-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.advantage-info {
+  max-width: 370px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0.5rem 2.1875rem;
+}
+
+.advantage-info img {
+  width: 18.75rem;
+  height: 12.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.advantage-info h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  margin-bottom: 0.625rem;
+}
+
+.advantage-info p {
+  padding: 0 1.375rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Quote CSS */
+.quote {
+  height: 100%;
+  width: 100%;
+  background-image: url(/img/citacao_image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+.quote blockquote {
+  width: 53%;
+  position: absolute;
+  bottom: 3.125rem;
+}
+
+.quote p {
+  position: relative;
+  color: white;
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 3.44rem;
+  margin-bottom: 1.875rem;
+  text-align: left;
+
+  quotes: '“';
+}
+
+.quote p::before {
+  position: absolute;
+  content: open-quote;
+  font-size: 13.75rem;
+
+  top: -1.875rem;
+}
+
+.quote small {
+  color: #818181;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Register and Support CSS */
+
+.support_and_register {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.support_and_register .register {
+  background-color: #F2F2F2;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  padding-left: 9.7rem;
+  padding-right: 5.3rem;
+}
+
+.support_and_register .register h2 {
+  font-size: 2.625rem;
+  font-weight: 500;
+  line-height: 3rem;
+  text-align: left;
+
+  margin-bottom: 3.75rem;
+}
+
+.support_and_register form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.support_and_register form button {
+  max-width: 12.5rem;
+}
+
+.support_and_register .support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-right: 6.25rem;
+}
+
+.support_and_register .support img {
+  width: 23.125rem;
+  height: 15.625rem;
+  padding-bottom: 1.875rem;
+}
+
+/* Media Queries */
+
+
+@media screen and (max-width: 1200px) {
+  html, body {
+    font-size: 15px;
+  }
+
+  .intro img {
+    margin-right: 0;
+  }
+
+  .advantage-info img {
+    width: 15.625rem;
+    height: 9.375rem;
+  }
+
+  .support_and_register .register {
+    padding-left: 6.25rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+
+  html, body {
+    font-size: 14px;
+  } 
+  .advantage-container {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-info img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .btn-move {
+    display: none;
+  }
+
+  .investments .scroller {
+    overflow-x: auto;
+  }
+  .support_and_register {
+    grid-template-columns: 1fr;
+  }
+
+  .support_and_register .register {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding: 3.75rem 3.125rem;
+  }
+
+  .support_and_register .support {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding: 3.75rem 3.125rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .header .navigation {
+    display: none;
+  }
+
+  .btn-move {
+    display: none;
+  }
+
+  .investments .scroller {
+    overflow-x: auto;
+  }
+  
+  .intro {
+    flex-direction: column-reverse;;
+    align-items: center;
+  }
+
+  .intro img {
+    margin-bottom: 6.25rem;
+  }
+
+  .intro-content h1 {
+    text-align: center;
+  }
+
+  .intro-content {
+    display: grid;
+  }
+  
+  .quote blockquote {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .quote blockquote p {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .support_and_register {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .support_and_register .register form {
+    width: 100%;
+  }
+  .support_and_register .register h2 {
+    font-size: 2rem;
+  }
+
+  .form input {
+    width: 100%;
+  }
+
+  .support_and_register .form button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .intro img {
+    width: 25rem;
+    height: 16.25rem;
+  }
+
+  .quote blockquote p {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .investments .scroller {
+    padding-left: 1.9rem;
+    padding-right: 1.9rem;
+  }
+  
+}
